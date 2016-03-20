@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Test for Yalantis</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="company">Комунальне підприємство</string>
+    <string name="create">Створено</string>
+    <string name="date_of_create">25 лютого 2016</string>
+    <string name="date_of_registered">26 лютого 2016</string>
+    <string name="date_solve_to_tv">29 лютого 2016</string>
+    <string name="description_text">Відкритий люк (біля рекламного щитка), район повроту 18 та 19 трамваїв на проспект Миру з Донецького шосе</string>
+    <string name="in_progress">В роботі</string>
+    <string name="registered">Зареєстровано</string>
+    <string name="responsible">Відповідальний</string>
+    <string name="solve_to">Вирішити до</string>
+</resources>
