@@ -133,3 +133,5 @@
         android:scrollbars="horizontal"/>
 
 </LinearLayout>
+
+    <!-- [Comment] Hardcode -->
