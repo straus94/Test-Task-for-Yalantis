@@ -7,4 +7,5 @@
     <color name="colorOrange">#f89900</color>
     <color name="colorDivider">#cccccc</color>
     <color name="textColor">#8b8b8b</color>
+    <color name="backgroundToolbar">#557cac</color>
 </resources>
