@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso;
  */
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
-    private int[] recycle_images;
+    private int[] mImages;
     private Context context;
 
 
@@ -28,8 +28,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     }
 
-    public RecyclerViewAdapter(Context context, int[] recycle_images) {
-        this.recycle_images = recycle_images;
+    public RecyclerViewAdapter(Context context, int[] mImages) {
+        this.mImages = mImages;
         this.context = context;
     }
 
@@ -43,18 +43,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         Picasso.with(context)
-                .load(recycle_images[position])
-                .resize(400, 300)
+                .load(mImages[position])
+                .resize(300, 300)
                 .into(holder.icon);
     }
 
     @Override
     public int getItemCount() {
-        return recycle_images.length;
+        return mImages.length;
     }
 
-    @Override
-    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        super.onAttachedToRecyclerView(recyclerView);
-    }
+//    @Override
+//    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+//        super.onAttachedToRecyclerView(recyclerView);
+//    }
 }

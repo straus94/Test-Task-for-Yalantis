@@ -48,7 +48,7 @@
 
     </style>
 
-    
+
     <!-- Divider -->
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>
@@ -65,7 +65,7 @@
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
     </style>
-    
+
     <!-- ProgressTVStyle -->
     <style name="ProgressTVStyle">
         <item name="android:layout_width">wrap_content</item>

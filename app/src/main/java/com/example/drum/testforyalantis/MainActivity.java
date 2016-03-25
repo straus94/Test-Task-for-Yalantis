@@ -13,9 +13,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView.Adapter adapter;
-    private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
 
 
     @Override
@@ -26,16 +23,17 @@ public class MainActivity extends AppCompatActivity {
         //create toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar()!=null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         //create RecyclerView
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
         //create RecyclerView adapter
-        adapter = new RecyclerViewAdapter(this, new int[] {R.drawable.img_1, R.drawable.img_2, R.drawable.img_3});
+        RecyclerView.Adapter adapter = new RecyclerViewAdapter(this, new int[]{R.drawable.img_1, R.drawable.img_2, R.drawable.img_3});
         recyclerView.setAdapter(adapter);
     }
 
@@ -47,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //show name control
-    public void onClick(View v){
+    public void onClick(View v) {
         TextView tv = (TextView) findViewById(v.getId());
-        Toast.makeText(MainActivity.this, tv.getText().toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, getResources().getResourceName(v.getId()), Toast.LENGTH_SHORT).show();
 
     }
 
