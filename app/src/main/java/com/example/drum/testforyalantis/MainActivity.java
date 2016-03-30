@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         //create RecyclerView adapter
-        RecyclerView.Adapter adapter = new RecyclerViewAdapter(this, new int[]{R.drawable.img_1, R.drawable.img_2, R.drawable.img_3});
+        RecyclerView.Adapter adapter = new RecyclerViewAdapter(this, new int[]{R.drawable.img_11, R.drawable.img_22, R.drawable.img_33});
         recyclerView.setAdapter(adapter);
     }
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     //show name control
     public void onClick(View v) {
         TextView tv = (TextView) findViewById(v.getId());
-        Toast.makeText(MainActivity.this, getResources().getResourceName(v.getId()), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, v.getClass().getName(), Toast.LENGTH_SHORT).show();
 
     }
 
